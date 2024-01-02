@@ -88,11 +88,11 @@ const isNumberEntered = text.match(/\d+/g);
       <div className="mb-3">
         <h1>{props.heading}</h1>
               <textarea className="form-control mb-4" ref={textRef}  id="box-1" rows="8" value={transcript||text} onChange={handleOnChange}></textarea>
-              <button className="btn btn-primary mx-1"disabled={text.length===0} onClick={handleUpClick}>Convert to UPPERCASE</button>
-              <button className="btn btn-success" disabled={text.length===0} onClick={handleDownClick}>Convert to lowercase</button>
-              <button className="btn btn-dark mx-1" disabled={text.length===0} onClick={handleClearClick}>Clear Text</button>
-              <button className="btn btn-danger " disabled={text.length===0} onClick={handleCopyClick}>Copy Text</button>
-              <button className="btn btn-success mx-1"  disabled={text.length===0} onClick={handleExtraSpaces}>Remove Extra Spaces</button>
+              <button className="btn btn-primary mx-1"disabled={text.trim().length === 0} onClick={handleUpClick}>Convert to UPPERCASE</button>
+              <button className="btn btn-success" disabled={text.trim().length === 0} onClick={handleDownClick}>Convert to lowercase</button>
+              <button className="btn btn-dark mx-1" disabled={text.trim().length === 0} onClick={handleClearClick}>Clear Text</button>
+              <button className="btn btn-danger " disabled={text.trim().length === 0} onClick={handleCopyClick}>Copy Text</button>
+              <button className="btn btn-success mx-1"  disabled={text.trim().length === 0} onClick={handleExtraSpaces}>Remove Extra Spaces</button>
               <button className="btn btn-primary " disabled={!isNumberEntered} onClick={handleExtractNumbers}>Extract Numbers</button>
               <button className="btn btn-primary mx-1" onClick={handleUndo} disabled={!prevText}> Undo Action</button>
               <button className="btn btn-success mx-1" onClick={startListening} > Start Listening</button>
@@ -100,7 +100,7 @@ const isNumberEntered = text.match(/\d+/g);
           </div>
           <div className="container">
             <h2>Your text summary</h2>
-            <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.replace(/\s/g, '').length} characters</p>
+            <p>Text:{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.replace(/\s/g, '').length} characters</p>
 
             <p>
           Transcript: {transcriptText.split(' ').filter((element) => element.length !== 0).length}{' '}

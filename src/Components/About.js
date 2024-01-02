@@ -11,13 +11,9 @@ const About = () => {
         for text drafting, and saving, but <i>TextUtils</i> offers much more
         than simple text drafting and formatting. TextUtils can convert your
         text to any case in just one simple click of a button. It can extract
-        links and numbers safely from a labyrinth of random text or
-        sophisticated documentation. It has an improved property of base64
-        encoding, reversal of your inputted text.You can even remove whitespaces
-        from your scripted documents, and wear up your earphones to listen to
-        it, instead of straining your eyes! It does a detailed analyzing of your
-        text, and provides an output of words, and characters, along with
-        reading time as well. The best part of <i>TextUtils</i> is that it is an
+        numbers safely from a text, and can also count the number of words and characters in a
+        text.It can also convert your speech to a text. You can even remove whitespaces
+        from your scripted documents. The best part of <i>TextUtils</i> is that it is an
         open source project, as a result, dozens of new features are in the
         upcoming, which definitely makes it a cut above the rest. <br />
         The most eminent features of the website are as follows :
